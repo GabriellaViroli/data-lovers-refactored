@@ -8,50 +8,50 @@ describe('mainFilters', () => {
 
 });
 
-describe('mainFilters.displayCharactersList', () => {
+describe('mainFilters.getCharactersNames', () => {
 
   it('should be a function', () => {
-    expect(typeof mainFilters.displayCharactersList).toBe('function');
+    expect(typeof mainFilters.getCharactersNames).toBe('function');
   });
 
   it('should return 08 characters', () => {
-    expect(mainFilters.displayCharactersList(charactersData).length).toBe(8)
+    expect(mainFilters.getCharactersNames(charactersData).length).toBe(8)
   })
 
   it('should return Bellatrix Lestrange', () => {
-    expect(mainFilters.displayCharactersList(charactersData).includes('Bellatrix Lestrange')).toBe(true)
+    expect(mainFilters.getCharactersNames(charactersData).includes('Bellatrix Lestrange')).toBe(true)
   })
 
 });
 
-describe('mainFilters.displayBooksList', () => {
+describe('mainFilters.getBooksTitles', () => {
 
   it('should be a function', () => {
-    expect(typeof mainFilters.displayBooksList).toBe('function');
+    expect(typeof mainFilters.getBooksTitles).toBe('function');
   });
 
   it('should return 2 books', () => {
-    expect(mainFilters.displayBooksList(booksData).length).toBe(2)
+    expect(mainFilters.getBooksTitles(booksData).length).toBe(2)
   })
 
   it('should return Harry Potter and the Prisoner of Azkaban', () => {
-    expect(mainFilters.displayBooksList(booksData).includes('Harry Potter and the Prisoner of Azkaban')).toBe(true)
+    expect(mainFilters.getBooksTitles(booksData).includes('Harry Potter and the Prisoner of Azkaban')).toBe(true)
   })
 
 });
 
-describe('mainFilters.displaySpellsList', () => {
+describe('mainFilters.getSpellsNames', () => {
 
   it('should be a function', () => {
-    expect(typeof mainFilters.displaySpellsList).toBe('function');
+    expect(typeof mainFilters.getSpellsNames).toBe('function');
   });
 
   it('should return 2 spells', () => {
-    expect(mainFilters.displaySpellsList(spellsData).length).toBe(2)
+    expect(mainFilters.getSpellsNames(spellsData).length).toBe(2)
   })
 
   it('should return Wingardium Leviosa', () => {
-    expect(mainFilters.displaySpellsList(spellsData).includes('Wingardium Leviosa')).toBe(true)
+    expect(mainFilters.getSpellsNames(spellsData).includes('Wingardium Leviosa')).toBe(true)
   })
 
 });
@@ -119,7 +119,5 @@ it ('should return 30%', () => {
 it ('should throw Error when receive a negative number', () => {
   expect(() => mainFilters.calcPercentage(-30, 100)).toThrow(TypeError);
 });
-it ('should throw Error when receive zero as divisor', () => {
-  expect(() => mainFilters.calcPercentage(30, 0)).toThrow(TypeError);
-});
+
 });

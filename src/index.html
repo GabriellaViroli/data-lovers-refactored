@@ -10,9 +10,8 @@
 <style>
   @import url('https://fonts.cdnfonts.com/css/harry-potter');
 </style>
-<script src="https://kit.fontawesome.com/5828f9f420.js" crossorigin="anonymous"></script>
 
-<body style="font-size:10px">
+<body>
   <header class="header">
     <img src="Images/Logo.svg" id="page-logo" class="page-logo" width="270" height="130">
     <button type="submit" id="btn-characters" class="menu-btns">Characters</button>
@@ -26,9 +25,9 @@
       <h2 class="welcome-description">
         A reference catalogue on the universe of Harry Potter books
       </h2>
-      <p class="welcome-text">Use the top menu to find information about characters, books and spells of the Harry Potter
-        world.</p>
+     
     </section>
+
     <section id="characters-list" class="modal-list" style="display:none">
       <h1 class="modal-header" id="header-modal-characters">Characters list</h1>
       <p class="modal-text">Filter characters by houses. You may also sort the list alphabetically:
@@ -37,50 +36,36 @@
           <option value="desc">Z - A</option>
         </select>
       </p>
-      <div class="horizontal-center">
-        <button type="submit" id="btn-gryffindor" class="modal-btn">Gryffindor</button>
-        <button type="submit" id="btn-slytherin" class="modal-btn">Slytherin</button>
-        <button type="submit" id="btn-hufflepuff" class="modal-btn">Hufflepuff</button>
-        <button type="submit" id="btn-ravenclaw" class="modal-btn">Ravenclaw</button>
+      <div id="houses-group-btn" class="horizontal-center">
+        <button type="submit" class="modal-btn">Gryffindor</button>
+        <button type="submit" class="modal-btn">Slytherin</button>
+        <button type="submit" class="modal-btn">Hufflepuff</button>
+        <button type="submit" class="modal-btn">Ravenclaw</button>
       </div>
-      <div id="characters-content" class="modal-characters-content">
+      <div id="characters-content" class="modal-content">
       </div>
       <div id="characters-percentage" class="footer-modal">
       </div>
     </section>
 
-    <section id="books-list" class="modal-list" style="display:none">
-      <h1 class="modal-header">Books list</h1>
-      <div id="books-content" class="modal-books-content"></div>
+    <section id="modal-list" class="modal-list" style="display:none">
+      <h1 id="modal-header-title" class="modal-header"></h1>
+      <div id="modal-content" class="modal-content"></div>
     </section>
 
-    <section id="spells-list" class="modal-list" style="display:none">
-      <h1 class="modal-header">Spells list</h1>
-      <div id="spells-content" class="modal-spells-content"></div>
+    <section id="card-info" class="modal-card" style="display:none">
+      <h1 id="card-info-title" class="card-title"></h1>
+      <div id="card-content-info" class="card-content"></div>
+      <button type="submit" id="return-btn" class="return-btn">Return</button>
     </section>
 
-    <section id="card-info-characters" class="modal-card" style="display:none">
-      <h1 id="card-title-characters" class="card-title"></h1>
-      <div id="card-content-characters" class="card-content"></div>
-      <button type="submit" id="return-btn-characters" class="return-btn">Return</button>
-    </section>
 
-    <section id="card-info-books" class="modal-card" style="display:none">
-      <h1 id="card-title-books" class="card-title"></h1>
-      <div id="card-content-books" class="card-content"></div>
-      <button type="submit" id="return-btn-books" class="return-btn">Return</button>
-    </section>
-
-    <section id="card-info-spells" class="modal-card" style="display:none">
-      <h1 id="card-title-spells" class="card-title"></h1>
-      <div id="card-content-spells" class="card-content"></div>
-      <button type="submit" id="return-btn-spells" class="return-btn">Return</button>
-    </section>
   </main>
 
   <footer class="footer">
 
-    <h1 class="footer-title"><a href="https://github.com/GabriellaViroli/SAP008-data-lovers" class="footer-link">Data
+    <h1 class="footer-title"><a href="https://github.com/GabriellaViroli/data-lovers-refactored"
+        class="footer-link">Data
         Seeeker</a></h1>
     <h2 class="footer-copyright">© 2022 </h2>
   </footer>
